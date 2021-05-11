@@ -5,7 +5,9 @@ import NavBar from './components/NavBar';
 export default function Main() {
     return(
         <>
-            <NavBar />
+            <div style={{position:'absolute', width:'100%'}}>
+                <NavBar />
+            </div>
             <MainPages />
         </>
     )
