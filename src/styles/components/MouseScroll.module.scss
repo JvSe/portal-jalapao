@@ -1,0 +1,29 @@
+.container {
+    width: 6vh;
+    height: 9vh;
+    border-radius: 39%;
+
+    border: 5px solid #fff;
+
+    div {
+        height: 15px;
+        width: 7px;
+        position: absolute;
+
+        left: 44%;
+        top: 10%;
+        background-color: white;
+        border-radius: 30%;
+
+        animation: mouse 1s ease infinite;
+    }
+
+}
+
+@keyframes mouse {
+    from {transform: translateY(10%);}
+    to {
+        transform: translateY(300%);
+        opacity: 0;
+    }
+}
