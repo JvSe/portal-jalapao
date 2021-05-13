@@ -2,13 +2,16 @@ import React from 'react';
 import styles from '../styles/pages/OqFazer.module.scss';
 import { Parallax } from 'react-scroll-parallax';
 
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/src/core/styles.scss';
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import AwesomeSliderStyles from 'react-awesome-slider/src/styled/fold-out-animation/index';
+
 import dunas from '../assets/slide/dunas.jpg';
 import cachoeiraFormiga from '../assets/slide/cachoeiraFormiga.png';
 import cachoeiraVelha from '../assets/slide/cachoeiraVelha.jpg';
 import fervedouro from '../assets/slide/fervedouro.jpg';
 
-
-import Coverflow  from 'react-coverflow';
 
 const imgs = [
     {
@@ -55,10 +58,9 @@ Uma vez por ano, geralmente em setembro, é realizada a festa da colheita do cap
 */
 
 export default function OqqFazer() {
+    
+    const AutoPlaySlide = withAutoplay(AwesomeSlider)
 
-    const fn = () => {
-        return;
-    }
     return(
         <div className={styles.container}>
             <div className={styles.rectTotal}/>
@@ -71,30 +73,17 @@ export default function OqqFazer() {
                 <h1>O que fazer?</h1>
                 <div className={styles.containerTextLeft}>
 
-                    <Coverflow
-                        width={960}
-                        height={480}
-                        classes={{background: 'rgb(233, 23, 23)'}}
-                        displayQuantityOfSide={1}
-                        navigation={false}
-                        enableHeading={true}
-                        
-                    >
-                        <div
-                            onClick={() => fn()}
-                            onKeyDown={() => fn()}
-                            tabIndex="0"
-                        >
-                            <img
-                                src={dunas}
-                                alt='title or description'
-                                style={{ display: 'block', width: '100%' }}
-                            />
-                        </div>
-                        <img src={cachoeiraFormiga} alt='title or description'/>
-                        <img src={cachoeiraVelha} alt='title or description'/>
-                        
-                    </Coverflow>
+                <AutoPlaySlide 
+                    animation="foldOutAnimation"
+                    cssModule={AwesomeSliderStyles}
+                    play={true}
+                    interval={3000}
+                >
+                    <div data-src={dunas} />
+                    <div data-src={cachoeiraFormiga} />
+                    <div data-src={cachoeiraVelha} />
+                    <div data-src={fervedouro} />
+                </AutoPlaySlide>
                 </div>
             </div>
         </div>
