@@ -9,6 +9,7 @@
     "react-icons": "^4.2.0",
     "react-scripts": "4.0.3",
     "react-scroll-parallax": "^2.4.0",
+    "sass": "^1.32.13",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
