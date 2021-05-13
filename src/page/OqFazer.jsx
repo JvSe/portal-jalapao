@@ -3,9 +3,8 @@ import styles from '../styles/pages/OqFazer.module.scss';
 import { Parallax } from 'react-scroll-parallax';
 
 import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/src/core/styles.scss';
-import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import AwesomeSliderStyles from 'react-awesome-slider/src/styled/fold-out-animation/index';
+import 'react-awesome-slider/src/core/styles.scss';
 
 import dunas from '../assets/slide/dunas.jpg';
 import cachoeiraFormiga from '../assets/slide/cachoeiraFormiga.png';
@@ -59,7 +58,6 @@ Uma vez por ano, geralmente em setembro, é realizada a festa da colheita do cap
 
 export default function OqqFazer() {
     
-    const AutoPlaySlide = withAutoplay(AwesomeSlider)
 
     return(
         <div className={styles.container}>
@@ -73,17 +71,18 @@ export default function OqqFazer() {
                 <h1>O que fazer?</h1>
                 <div className={styles.containerTextLeft}>
 
-                <AutoPlaySlide 
+                <AwesomeSlider 
                     animation="foldOutAnimation"
                     cssModule={AwesomeSliderStyles}
-                    play={true}
-                    interval={3000}
                 >
-                    <div data-src={dunas} />
+                    <div style={{display:'flex'}}>
+                        <img src={dunas} alt="Dunas Jalapão" />
+                        <div style={{width:'100px', height:'100px', backgroundColor:'red'}}></div>
+                    </div>
                     <div data-src={cachoeiraFormiga} />
                     <div data-src={cachoeiraVelha} />
                     <div data-src={fervedouro} />
-                </AutoPlaySlide>
+                </AwesomeSlider>
                 </div>
             </div>
         </div>
