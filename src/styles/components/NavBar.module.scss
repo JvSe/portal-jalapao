@@ -63,6 +63,7 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
+            transition: .5s linear;
 
             a {
                 padding-top: 1rem;
@@ -132,4 +133,43 @@
         opacity: 1;
         transform: translateY(100%);
     }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container {
+        nav {
+            .underLine {
+                .img {
+                    img {
+                        width:350%;
+                    }
+                }
+
+                .menuHamburger {
+                    width: 15%;
+                }
+            }
+
+            .subLine {
+                opacity: 0;
+            }
+        }
+        
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
 }

@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 
     background: url(../../assets/azul.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -66,8 +67,8 @@
             gap: 1.5rem;
 
            .card {
-                height: 70%;
-                width: 35%;
+                height: 90%;
+                width: 55%;
                 background-color: white;
                 border-radius: 30px;
 
@@ -82,24 +83,26 @@
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
 
                 img {
-                    width: 40%;
+                    width: 35%;
                     border-radius: 50%;
                     box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
                 }
 
                 .containerCardText {
                     width: 80%;
+                    margin-top: -2rem;
                     h1 {
                         color: #0093C1;
-                        font-size: 1.2rem;
+                        font-size: 2rem;
                         text-align: center;
                         padding: 0;
                         margin: 0;
+
                     }
     
                     h2 {
                         color: #0093C1;
-                        font-size: .7rem;
+                        font-size: .9rem;
                         text-align: center;
                         font-weight: 300;
 
@@ -120,10 +123,12 @@
                             color:#0093C1;
                             padding-right: .3rem;
                             border-right: 1px solid black;
+                            width: 2.5rem;
                         }
 
                         p {
                             padding-left: .3rem;
+                            font-size: 1.4rem;
                             font-family: 'Josefin sans', sans-serif;
                         }
                     }
@@ -136,42 +141,66 @@
             }
         }
     }
+}
 
-    .containerText {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-self: flex-end;
-        margin-right: 10rem;
-        z-index: 3;
+@media only screen and (max-width: 600px) {
+    .container {
+        .parallaxRect {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        h1 {
-            font-family: 'Josefin sans', sans-serif;
-            text-transform: uppercase;
-            font-size: 8rem;
-            z-index: 1;
-            color: white;
-    
-            text-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+            .rectLeft {
+                position: inherit;
+                width: 100vw;
+                height: 60vh;
+
+                
+            }
         }
-    
-        p {
-            font-family: 'Bebas Neue', cursive;
-            font-size:2.5rem;
-            margin-top: -2rem;
-            letter-spacing: 1rem;
-            color: white;
-            z-index: 3;
-    
-            text-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+        
+        .rectLeftText {
+            height: 80vh;
+            width: 105%;
+            justify-content: center;
+
+            .textTitle {
+                font-size: 2rem;
+                margin-top: 1rem;
+            }
+
+            .containerTextLeft {
+                .card {
+                    height: 100%;
+                    width: 100%;
+
+                    .containerCardText {
+                        margin-top: 0;
+
+                        h1 {
+                            font-size: 1.5rem;
+                        }
+
+                        h2 {
+                            font-size: .8rem;
+                        }
+                    }
+
+                    .containerCardContact {
+                        div {
+                            padding: 0;
+
+                            .iconCard {
+                                width: 1.1rem;
+                            }
+                            p {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                    
+                }
+            }
         }
-    }
-
-   
-
-    .effectScroll {
-        position: absolute;
-        bottom: 1rem;
     }
 }

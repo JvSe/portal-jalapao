@@ -3,9 +3,15 @@ import styles from '../styles/pages/Contatos.module.scss';
 import { Parallax } from 'react-scroll-parallax';
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
-import eu from '../assets/eu.jpeg'
+import sedematur from '../assets/logoSedematur.png'
+
+
 
 export default function Contatos() {
+    
+    const openChat = () => {
+        window.open('https://api.whatsapp.com/send?phone=5563992944578')
+    }
     return(
         <div className={styles.container}>
             <div className={styles.rectTotal}/>
@@ -15,58 +21,22 @@ export default function Contatos() {
             </Parallax>
 
             <div className={styles.rectLeftText}>
-                <h1>Contato</h1>
+                <h1 className={styles.textTitle}>Contato</h1>
                 <div className={styles.containerTextLeft}>
-                    <div className={styles.card}>
-                        <img src={eu} alt="João Vitor Soares" />
+                    <div className={styles.card} onClick={openChat}>
+                        <img src={sedematur} alt="Sedematur" />
                         <div className={styles.containerCardText}>
-                            <h1>João Vitor Soares Egidio</h1>
-                            <h2> Software Engineer, Web Designer, Web Developer</h2>
+                            <h1>Sedematur</h1>
+                            <h2> Secretaria de Turismo e Meio Ambiente de Mateiros no Jalapão, Tocantins.</h2>
                         </div>
                         <div className={styles.containerCardContact}>
                             <div>
-                                <FaPhoneAlt className={styles.iconCard}/>
-                                <p>joaovitorsoares12@gmail.com</p>
+                                <FaPhoneAlt className={styles.iconCard} size={'1.3rem'}/>
+                                <p>sedematur@gmail.com</p>
                             </div>
                             <div>
-                                <FaEnvelope className={styles.iconCard}/>
-                                <p>(63) 98424-5890</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <img src={eu} alt="João Vitor Soares" />
-                        <div className={styles.containerCardText}>
-                            <h1>João Vitor Soares Egidio</h1>
-                            <h2> Software Engineer, Web Designer, Web Developer</h2>
-                        </div>
-                        <div className={styles.containerCardContact}>
-                            <div>
-                                <FaPhoneAlt className={styles.iconCard}/>
-                                <p>joaovitorsoares12@gmail.com</p>
-                            </div>
-                            <div>
-                                <FaEnvelope className={styles.iconCard}/>
-                                <p>(63) 98424-5890</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <img src={eu} alt="João Vitor Soares" />
-                        <div className={styles.containerCardText}>
-                            <h1>João Vitor Soares Egidio</h1>
-                            <h2> Software Engineer, Web Designer, Web Developer</h2>
-                        </div>
-                        <div className={styles.containerCardContact}>
-                            <div>
-                                <FaPhoneAlt className={styles.iconCard}/>
-                                <p>joaovitorsoares12@gmail.com</p>
-                            </div>
-                            <div>
-                                <FaEnvelope className={styles.iconCard}/>
-                                <p>(63) 98424-5890</p>
+                                <FaEnvelope className={styles.iconCard} size={'1.3rem'}/>
+                                <p>(63) 99294-4578</p>
                             </div>
                             
                         </div>

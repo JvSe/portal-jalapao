@@ -1,6 +1,4 @@
 import React from 'react';
-import styles from '../styles/pages/OqFazer.module.scss';
-import { Parallax } from 'react-scroll-parallax';
 
 import AwesomeSlider from 'react-awesome-slider';
 import AwesomeSliderStyles from 'react-awesome-slider/src/styled/fold-out-animation/index';
@@ -10,22 +8,11 @@ import dunas from '../assets/slide/dunas.jpg';
 import cachoeiraFormiga from '../assets/slide/cachoeiraFormiga.png';
 import cachoeiraVelha from '../assets/slide/cachoeiraVelha.jpg';
 import fervedouro from '../assets/slide/fervedouro.jpg';
+import PageTemplate from '../components/PageTemplate';
+
+import amarelo from '../assets/amarelo.png';
 
 
-const imgs = [
-    {
-        img:dunas
-    },
-    {
-        img:cachoeiraFormiga
-    },
-    {
-        img:cachoeiraVelha
-    },
-    {
-        img:fervedouro
-    },
-]
 /**
  * DUNAS:Principal cartão postal do Jalapão, as Dunas formam um dos maiores espetáculos naturais do país. Localizada entre os municípios de Ponte Alta e Mateiros é parada obrigatória para quem visita a região conhecida como Deserto do Jalapão, que se formou pela erosão das serras rochosas.
 Em constante movimento as dunas do Jalapão e suas belezas são guiadas pelos ventos e quem as visitas garante ainda o espetáculo da Serra do Espírito Santo, a sua volta e de formação arenosa, cuja ação dos ventos causa sua erosão, originando as dunas.
@@ -56,35 +43,25 @@ Localizada no município de Mateiros, a 25 km da sede municipal, o atrativo é u
 Uma vez por ano, geralmente em setembro, é realizada a festa da colheita do capim dourado com manifestações culturais, cantorias e rodas de conversa que têm o objetivo de manter as tradições.
 */
 
-export default function OqqFazer() {
-    
+export default function OqFazer() {
 
     return(
-        <div className={styles.container}>
-            <div className={styles.rectTotal}/>
 
-            <Parallax className={styles.parallaxRect} x={[-20, 20]}>
-                <div className={styles.rectLeft} />
-            </Parallax>
-
-            <div className={styles.rectLeftText}>
-                <h1>O que fazer?</h1>
-                <div className={styles.containerTextLeft}>
-
-                <AwesomeSlider 
-                    animation="foldOutAnimation"
-                    cssModule={AwesomeSliderStyles}
-                >
-                    <div style={{display:'flex'}}>
-                        <img src={dunas} alt="Dunas Jalapão" />
-                        <div style={{width:'100px', height:'100px', backgroundColor:'red'}}></div>
-                    </div>
-                    <div data-src={cachoeiraFormiga} />
-                    <div data-src={cachoeiraVelha} />
-                    <div data-src={fervedouro} />
-                </AwesomeSlider>
-                </div>
-            </div>
-        </div>
+        <PageTemplate 
+            img={amarelo}
+            fixed
+            color={'#F2DC6D'}
+            title={'O que fazer?'}
+        >
+            <AwesomeSlider 
+                animation="foldOutAnimation"
+                cssModule={AwesomeSliderStyles}
+            >
+                <div data-src={dunas} />
+                <div data-src={cachoeiraFormiga} />
+                <div data-src={cachoeiraVelha} />
+                <div data-src={fervedouro} />
+            </AwesomeSlider>
+        </PageTemplate>
     )
 }

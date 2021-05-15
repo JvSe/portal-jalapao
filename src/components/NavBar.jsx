@@ -5,14 +5,9 @@ import imgNav from '../assets/logoNavBar.png';
 export default function NavBar() {
     const [menuPressed, setMenu] = useState(false);
 
-    window.addEventListener("click", () => {
-        const tagA = document.getElementsByTagName('a')
-        console.log(tagA);
-    })
-    
 
-    const menuToggle = () => {
-        console.log('entrei aqui')
+    const menuToggle = (valor) => {
+        
         const bar1 = document.getElementById('bar1');
         const bar2 = document.getElementById('bar2');
         const bar3 = document.getElementById('bar3');
@@ -38,6 +33,8 @@ export default function NavBar() {
             bar3.style.transform = 'rotate(0)';
             setMenu(false);
         }
+        
+        
     }
 
     return(

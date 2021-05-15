@@ -20,8 +20,6 @@
         width: 100%;
         height: 100%;
         opacity: .3;
-        top: 0;
-        left: 0;
     }
 
     .rectLeft {
@@ -66,4 +64,41 @@
         position: absolute;
         bottom: 1rem;
     }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container {
+        .parallaxText {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            p {
+                font-size:1.5rem;
+                letter-spacing: .2rem;
+                margin-top: 0;
+            }
+        }
+
+        .rectLeft {
+            width: 100%;
+            height: 40%;
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
 }

@@ -3,6 +3,7 @@ import MouseScroll from '../components/MouseScroll';
 import { Parallax } from 'react-scroll-parallax';
 import styles from '../styles/pages/Home.module.scss';
 
+
 function Home() {
   return (
     <div className={styles.container}>

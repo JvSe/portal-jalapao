@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="%PUBLIC_URL%/icon.png" />
     <title>Encantos do Jalapão</title>
+
+    <script src="http://code.jquery.com/jquery-1.6.4.js"></script>
+    <script src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
+
+    <script>
+      var tela = window.innerWidth
+      console.log(tela)
+      if (tela > 600) {
+        $(function() {
+          $("html, body").mousewheel(function(event, delta) {
+            this.scrollLeft -= (delta * 300);
+            this.scrollRight -= (delta * 300);
+            event.preventDefault();
+          });
+        });
+      }
+      
+    </script>
+
+    <style>
+      html {
+        transition: .5s linear;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
