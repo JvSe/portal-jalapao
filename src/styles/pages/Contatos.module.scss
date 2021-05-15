@@ -143,6 +143,73 @@
     }
 }
 
+@media only screen and (max-width: 992px) {
+    .container {
+        .parallaxRect {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .rectLeft {
+                position: inherit;
+                width: 100vw;
+                height: 60vh;
+
+                
+            }
+        }
+        
+        .rectLeftText {
+            height: 80vh;
+            width: 105%;
+            justify-content: center;
+
+            .textTitle {
+                font-size: 2rem;
+                margin-top: 1rem;
+            }
+
+            .containerTextLeft {
+                .card {
+                    height: 100%;
+                    width: 100%;
+
+                    img {
+                        width: 20%;
+                    }
+
+                    .containerCardText {
+                        margin-top: 0;
+
+                        h1 {
+                            font-size: 1.8rem;
+                        }
+
+                        h2 {
+                            font-size: 1.1rem;
+                        }
+                    }
+
+                    .containerCardContact {
+                        div {
+                            padding: 0;
+
+                            .iconCard {
+                                width: 2rem;
+                            }
+                            p {
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
 @media only screen and (max-width: 600px) {
     .container {
         .parallaxRect {

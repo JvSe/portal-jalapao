@@ -71,6 +71,44 @@
     }
 }
 
+@media only screen and (max-width: 992px) {
+    .container {
+        .parallaxRect {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .rectLeft {
+                position: inherit;
+                width: 100vw;
+                height: 60vh;
+
+                
+            }
+        }
+        
+        .rectLeftText {
+            height: 80vh;
+            width: 105%;
+            justify-content: center;
+
+            .textTitle {
+                font-size: 3rem;
+                margin-top: 1rem;
+            }
+
+            .containerTextLeft {
+                overflow: auto;
+
+                .text {
+                    font-size: 1.6rem;
+                }
+            }
+            
+        }
+    }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .container {
