@@ -1,8 +1,7 @@
 import React from 'react';
 
-import AwesomeSlider from 'react-awesome-slider';
-import AwesomeSliderStyles from 'react-awesome-slider/src/styled/fold-out-animation/index';
-import 'react-awesome-slider/src/core/styles.scss';
+import Captioned from 'react-awesome-slider/src/hoc/captioned-images/hoc';
+import CaptionedStyles from 'react-awesome-slider/src/components/captioned/styles.scss';
 
 import dunas from '../assets/slide/dunas.jpg';
 import cachoeiraFormiga from '../assets/slide/cachoeiraFormiga.png';
@@ -46,22 +45,29 @@ Uma vez por ano, geralmente em setembro, é realizada a festa da colheita do cap
 export default function OqFazer() {
 
     return(
-
         <PageTemplate 
             img={amarelo}
             fixed
             color={'#F2DC6D'}
             title={'O que fazer?'}
         >
-            <AwesomeSlider 
-                animation="foldOutAnimation"
-                cssModule={AwesomeSliderStyles}
-            >
-                <div data-src={dunas} />
-                <div data-src={cachoeiraFormiga} />
-                <div data-src={cachoeiraVelha} />
-                <div data-src={fervedouro} />
-            </AwesomeSlider>
+            <Captioned
+                startupScreen={StartupScreen}
+                cssModule={CaptionedStyles}
+                screens={[
+                {
+                    backgroundColor: '#4a9c8c',
+                    media: dunas,
+                    caption: 'I want to see what you got.',
+                },
+                {
+                    backgroundColor: '#4a9c8c',
+                    media: cachoeira,
+                    caption: 'The answer is -- Don t think about it.',
+                },
+                // ...
+                ]}
+            />
         </PageTemplate>
     )
 }
