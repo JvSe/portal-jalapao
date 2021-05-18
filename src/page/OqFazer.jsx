@@ -44,6 +44,19 @@ Uma vez por ano, geralmente em setembro, é realizada a festa da colheita do cap
 
 export default function OqFazer() {
 
+    const listMedia = [
+        {
+            backgroundColor: '#4a9c8c',
+            media: dunas,
+            caption: 'I want to see what you got.',
+        },
+        {
+            backgroundColor: '#4a9c8c',
+            media: cachoeira,
+            caption: 'The answer is -- Don t think about it.',
+        },
+        // ...
+        ]
     return(
         <PageTemplate 
             img={amarelo}
@@ -54,19 +67,6 @@ export default function OqFazer() {
             <Captioned
                 startupScreen={StartupScreen}
                 cssModule={CaptionedStyles}
-                screens={[
-                {
-                    backgroundColor: '#4a9c8c',
-                    media: dunas,
-                    caption: 'I want to see what you got.',
-                },
-                {
-                    backgroundColor: '#4a9c8c',
-                    media: cachoeira,
-                    caption: 'The answer is -- Don t think about it.',
-                },
-                // ...
-                ]}
             />
         </PageTemplate>
     )
