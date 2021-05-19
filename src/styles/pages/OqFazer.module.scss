@@ -1,0 +1,32 @@
+.containerText {
+    position: relative;
+    width:30rem;
+    height: 5rem;
+    
+    display: flex;
+    align-items: center;
+
+    
+
+    .blurContainer {
+        padding: .8rem;
+        padding-top: 1rem;
+        
+        border-radius: 15px 15px 0 0 ;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+    }
+
+
+    p {
+        display: -webkit-box;
+        max-width: 30rem;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: black;
+        font-family: 'Josefin sans', sans-serif;
+
+        text-align: center;
+    }
+}

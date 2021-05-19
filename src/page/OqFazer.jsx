@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Captioned from 'react-awesome-slider/src/hoc/captioned-images/hoc';
-import CaptionedStyles from 'react-awesome-slider/src/components/captioned/styles.scss';
+import AwesomeSlider from 'react-awesome-slider';
+import AwsSlider from 'react-awesome-slider/src/styles';
 
 import dunas from '../assets/slide/dunas.jpg';
 import cachoeiraFormiga from '../assets/slide/cachoeiraFormiga.png';
@@ -11,6 +11,9 @@ import PageTemplate from '../components/PageTemplate';
 
 import amarelo from '../assets/amarelo.png';
 
+import styles from '../styles/pages/OqFazer.module.scss';
+
+import BackdropFilter from "react-backdrop-filter";
 
 /**
  * DUNAS:Principal cartão postal do Jalapão, as Dunas formam um dos maiores espetáculos naturais do país. Localizada entre os municípios de Ponte Alta e Mateiros é parada obrigatória para quem visita a região conhecida como Deserto do Jalapão, que se formou pela erosão das serras rochosas.
@@ -44,19 +47,6 @@ Uma vez por ano, geralmente em setembro, é realizada a festa da colheita do cap
 
 export default function OqFazer() {
 
-    const listMedia = [
-        {
-            backgroundColor: '#4a9c8c',
-            media: dunas,
-            caption: 'I want to see what you got.',
-        },
-        {
-            backgroundColor: '#4a9c8c',
-            media: cachoeira,
-            caption: 'The answer is -- Don t think about it.',
-        },
-        // ...
-        ]
     return(
         <PageTemplate 
             img={amarelo}
@@ -64,10 +54,26 @@ export default function OqFazer() {
             color={'#F2DC6D'}
             title={'O que fazer?'}
         >
-            <Captioned
-                startupScreen={StartupScreen}
-                cssModule={CaptionedStyles}
-            />
+            <AwesomeSlider cssModule={AwsSlider}>
+                <div data-src={dunas} style={{display:'flex', alignItems:'flex-end', justifyContent:'center'}}>
+
+                    <div className={styles.containerText}>
+                        <BackdropFilter 
+                            className={styles.blurContainer}
+                            filter={"blur(10px) sepia(50%)"}
+                        >
+                            <p>
+                                Principal cartão postal do Jalapão, as Dunas formam um dos maiores espetáculos naturais do país. Localizada entre os municípios de Ponte Alta e Mateiros é parada obrigatória para quem visita a região conhecida como Deserto do Jalapão, que se formou pela erosão das serras rochosas.
+                                Em constante movimento as dunas do Jalapão e suas belezas são guiadas pelos ventos e quem as visitas garante ainda o espetáculo da Serra do Espírito Santo, a sua volta e de formação arenosa, cuja ação dos ventos causa sua erosão, originando as dunas.
+                                O atrativo possui a formação de dunas em areias finas e avermelhadas que atingem aproximadamente 40 metros de altura. A paisagem também é composta por uma lagoa rodeada de brejos, buritis e riacho, situada no caminho que dá acesso, em meio à vegetação de cerrado. A preferência pelas subidas ocorre no fim do dia, quando a temperatura cai e a areia começa a esfriar. Do topo é possível ter uma visão panorâmica da região como as veredas típicas de cerrado e a Serra do Espírito do Santo que, juntamente com o pôr do sol, transforma o atrativo em um cenário singular propício à contemplação.
+                            </p>
+                        </BackdropFilter>
+                    </div>
+                    
+                </div>
+                <div data-src={cachoeiraFormiga} />
+                <div data-src={cachoeiraVelha} />
+            </AwesomeSlider>
         </PageTemplate>
     )
 }
