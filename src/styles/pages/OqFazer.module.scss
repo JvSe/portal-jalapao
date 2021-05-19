@@ -4,29 +4,55 @@
     height: 5rem;
     
     display: flex;
-    align-items: center;
+    padding: .8rem;
+    padding-top: 1rem;
 
-    
+    border-radius: 15px 15px 0 0 ;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+    backdrop-filter: blur(5px);
 
-    .blurContainer {
-        padding: .8rem;
-        padding-top: 1rem;
-        
-        border-radius: 15px 15px 0 0 ;
-        background: rgba(255, 255, 255, 0.5);
-        box-shadow: 0 15px 25px rgba(0,0,0,0.05);
-    }
-
+    cursor: pointer;
+    transition: .5s ease;
 
     p {
         display: -webkit-box;
         max-width: 30rem;
-        -webkit-line-clamp: 4;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        color: black;
+        color: white;
         font-family: 'Josefin sans', sans-serif;
 
         text-align: center;
+        transition: .5s ease;
+    
     }
+
+    &:hover {
+        height: 20rem;
+        backdrop-filter: blur(30px);
+
+        p{
+            overflow: unset;
+            overflow-y: auto;
+            -webkit-line-clamp:unset;
+        }
+    }
+}
+
+.awsbtn {
+    --slider-height-percentage: 60%;
+    --slider-transition-duration: 575ms;
+    --organic-arrow-thickness: 5px;
+    --organic-arrow-border-radius: 12px;
+    --organic-arrow-height: 28px;
+    --organic-arrow-color: #ffffff;
+    --control-button-width: 10%;
+    --control-button-height: 25%;
+    --control-button-background: transparent;
+    --control-bullet-color: #6a6a6a;
+    --control-bullet-active-color: #6a6a6a;
+    --loader-bar-color: #ffffff;
+    --loader-bar-height: 6px;
 }
