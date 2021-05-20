@@ -18,11 +18,11 @@
           var rolaagem = true;
           $("html, body").mousewheel(function(event, delta) {
 
-            $("#containerText").mouseover(function(event) {
+            $("#containerText, #textSlide").mouseover(function(event) {
               rolaagem = false;
             })
 
-            $('#containerText').mouseout(function(event) {
+            $('#containerText, #textSlide').mouseout(function(event) {
               rolaagem = true;
             })
 

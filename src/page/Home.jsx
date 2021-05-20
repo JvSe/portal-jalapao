@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MouseScroll from '../components/MouseScroll';
 import { Parallax } from 'react-scroll-parallax';
 import styles from '../styles/pages/Home.module.scss';
 
+import InstagramEmbed from 'react-instagram-embed';
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL:'https://www.instagram.com/web/search/topsearch/?context=blended&query=jvitorse',
+  headers:{'Access-Control-Allow-Origin':'*'}
+})
 
 function Home() {
+  const [urlPhoto, setUrl] = useState();
+
+  useEffect(() => {
+    async function buscaMidiaInsta() {
+      const response = await api.get();
+      console.log(response);
+    }
+
+    buscaMidiaInsta();
+
+  })
   return (
     <div className={styles.container}>
+
       <div className={styles.rectTotal}/>
       
       <div className={styles.rectLeft} />
@@ -20,7 +39,20 @@ function Home() {
         
       </Parallax>
       
-
+      <InstagramEmbed
+        url='https://www.instagram.com/sedematur/'
+        clientAccessToken='307904560792954|2b1e86db57a7eedbbfeb044c250578ff'
+        maxWidth={320}
+        hideCaption={true}
+        containerTagName='div'
+        protocol=''
+        injectScript
+        onLoading={() => {}}
+        onSuccess={() => {}}
+        onAfterRender={() => {}}
+        onFailure={() => {}}
+      />
+      
       <div className={styles.effectScroll}>
         <MouseScroll />
       </div>
