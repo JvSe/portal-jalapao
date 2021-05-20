@@ -13,11 +13,24 @@
       var tela = window.innerWidth
       console.log(tela)
       if (tela > 600) {
+        
         $(function() {
+          var rolaagem = true;
           $("html, body").mousewheel(function(event, delta) {
-            this.scrollLeft -= (delta * 300);
-            this.scrollRight -= (delta * 300);
-            event.preventDefault();
+
+            $("#containerText").mouseover(function(event) {
+              rolaagem = false;
+            })
+
+            $('#containerText').mouseout(function(event) {
+              rolaagem = true;
+            })
+
+            if(rolaagem === true) {
+              this.scrollLeft -= (delta * 300);
+              this.scrollRight -= (delta * 300);
+              event.preventDefault();
+            }
           });
         });
       }

@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../styles/components/PageTemplate.module.scss';
 import { Parallax } from 'react-scroll-parallax';
-import Fade from 'react-reveal'
+
 export default function PageTemplate(props) {
-   
-    var tela = window.outerWidth;
     
     return(
         <div 
@@ -34,7 +32,7 @@ export default function PageTemplate(props) {
                 
             <div className={styles.rectLeftText}>
                 <h1 className={styles.textTitle}>{props.title}</h1>
-                <div className={styles.containerTextLeft}>
+                <div id="containerText" className={styles.containerTextLeft}>
 
                     {props.children ? 
                         props.children :

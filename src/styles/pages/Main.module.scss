@@ -1,5 +1,11 @@
 .container {
     display: flex;
+
+    div#home, div#jalapao, div#mateiros, div#oqfazer, div#contatos {
+        width: 100vw;
+        height: 100vh;
+    }
+    
 }
 
 

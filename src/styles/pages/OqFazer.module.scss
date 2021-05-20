@@ -10,8 +10,11 @@
     border-radius: 15px 15px 0 0 ;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 15px 25px rgba(0,0,0,0.05);
-    backdrop-filter: blur(5px);
 
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
     cursor: pointer;
     transition: .5s ease;
 

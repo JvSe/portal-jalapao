@@ -10,35 +10,29 @@ import Contatos from './Contatos'
 export default function MainPages() {
     
     return(
-        <body>
-            
-            <div className={styles.container}>
-                <div id="home">
-                    <Home />
-                </div>
-                <div id="jalapao">
-                    <Jalapao />
-                </div>
-                <div id="mateiros">
-                    <Mateiros />
-                </div>
-                {/**
-                 * <div id="sedematur">
-                    <Sedematur />
-                </div>
-                 * 
-                 */}
-                
-                <div id="oqfazer">
-                    <OqFazer />
-                </div>
-                <div id="contatos">
-                    <Contatos />
-                </div>
+        <div className={styles.container}>
+            <div id="home">
+                <Home />
             </div>
-
-        </body>
-        
-        
+            <div id="jalapao">
+                <Jalapao />
+            </div>
+            <div id="mateiros">
+                <Mateiros />
+            </div>
+            {/**
+             * <div id="sedematur">
+                <Sedematur />
+            </div>
+                * 
+                */}
+            
+            <div id="oqfazer">
+                <OqFazer />
+            </div>
+            <div id="contatos">
+                <Contatos />
+            </div>
+        </div>
     )
 }
