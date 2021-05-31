@@ -1,0 +1,45 @@
+.containerLink {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(1) {
+        display: flex;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    &:nth-child(1) {
+        display: flex;
+    }
+
+    
+
+}
+
+.imgContainer {
+    transition: .2s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.textoName {
+    height: 100%;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Josefin sans', sans-serif;
+    font-weight: 700;
+
+    font-size: .7rem;
+    text-align: center;
+    position: absolute;
+    top: 4rem;
+}

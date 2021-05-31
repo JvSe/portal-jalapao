@@ -6,23 +6,9 @@ import styles from '../styles/pages/Home.module.scss';
 import InstagramEmbed from 'react-instagram-embed';
 import axios from 'axios';
 
-const api = axios.create({
-  baseURL:'https://www.instagram.com/web/search/topsearch/?context=blended&query=jvitorse',
-  headers:{'Access-Control-Allow-Origin':'*'}
-})
-
 function Home() {
   const [urlPhoto, setUrl] = useState();
-
-  useEffect(() => {
-    async function buscaMidiaInsta() {
-      const response = await api.get();
-      console.log(response);
-    }
-
-    buscaMidiaInsta();
-
-  })
+  
   return (
     <div className={styles.container}>
 

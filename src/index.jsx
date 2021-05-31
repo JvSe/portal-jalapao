@@ -7,6 +7,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import './styles/global.module.scss';
 
 ReactDOM.render(
+
   <ParallaxProvider scrollAxis={'horizontal'}>
     <Main />
   </ParallaxProvider>
