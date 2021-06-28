@@ -50,9 +50,9 @@ export default function NavBar() {
                     </div>
                 </div>
                 <div className={styles.subLine}>
+                    <a href="#home" > Início </a>
                     <a href="#jalapao" > Jalapão </a>
-                    <a href="#mateiros"> Mateiros</a>
-                    <a href="#sedematur" > Sedematur </a>
+                    <a href="#cidades"> Cidades </a>
                     <a href="#oqfazer" > O que fazer? </a>
                     <a href="#contatos" > Contatos </a>
                 </div>  
@@ -60,9 +60,9 @@ export default function NavBar() {
 
             <div id="menu" className={styles.containerMenuHamburger}>
                 <div>
+                    <a onClick={menuToggle} href="#home"> Início </a>
                     <a onClick={menuToggle} href="#jalapao"> Jalapão </a>
-                    <a onClick={menuToggle} href="#mateiros"> Mateiros</a>
-                    <a onClick={menuToggle} href="#sedematur"> Sedematur </a>
+                    <a onClick={menuToggle} href="#cidades"> Cidades </a>
                     <a onClick={menuToggle} href="#oqfazer"> O que fazer? </a>
                     <a onClick={menuToggle} href="#contatos"> Contatos </a>
                 </div>

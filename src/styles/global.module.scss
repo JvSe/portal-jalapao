@@ -9,7 +9,7 @@
 }
 
 *::-webkit-scrollbar {
-    width: 3px;
+    width: 1px;
 }
 
 *::-webkit-scrollbar-track {
@@ -18,7 +18,7 @@
 
 *::-webkit-scrollbar-thumb {
     background-color: rgb(212, 209, 209);
-    border-radius: 5px;
+    border-radius: 1px;
 }
 html {
     scroll-behavior: smooth;

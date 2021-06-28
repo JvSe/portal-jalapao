@@ -2,6 +2,10 @@ import React from 'react';
 import MainPages from './page/MainPages';
 import NavBar from './components/NavBar';
 
+
+//import "slick-carousel/slick/slick.css";
+//import "slick-carousel/slick/slick-theme.css";
+
 export default function Main() {
     return(
         <>

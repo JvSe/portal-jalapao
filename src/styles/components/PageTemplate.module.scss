@@ -1,3 +1,5 @@
+
+
 .container {
     height: 100vh;
     width: 100vw;
@@ -55,6 +57,14 @@
             text-shadow: 2px  2px 2px rgba(0, 0, 0, .5);
         }
 
+        .textTitleH3 {
+            color: white;
+            font-family: 'Josefin sans', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px  2px 2px rgba(0, 0, 0, .5);
+        }
+
         .containerTextLeft {
             width: 80%;
             height: 50%;
@@ -63,14 +73,35 @@
             overflow-y: auto;
             overflow-x: hidden;
 
-            .text{
+            .text {
                 font-family: 'Josefin sans', sans-serif;
-                font-size: 1.6rem;
+                font-size: 1.5rem;
                 color: white;
+                text-align: justify;
                 text-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
 
             }
         }
+    }
+}
+
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:80%;
+    height:100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .textTwo{
+        font-family: 'Josefin sans', sans-serif;
+        font-size: 1.5rem;
+        color: white;
+        text-align: justify;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+
     }
 }
 
