@@ -1,47 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="%PUBLIC_URL%/icon.png" />
-    <title>Encantos do Jalapão</title>
-
-    <script src="http://code.jquery.com/jquery-1.6.4.js"></script>
-    <script src="https://css-tricks.com/examples/HorzScrolling/jquery.mousewheel.js"></script>
-
-    <script>
-      var tela = window.innerWidth
-      console.log(tela)
-      if (tela > 600) {
-        
-        $(function() {
-          var rolaagem = true;
-          $("html, body").mousewheel(function(event, delta) {
-
-            $("#containerText, #textSlide").mouseover(function(event) {
-              rolaagem = false;
-            })
-
-            $('#containerText, #textSlide').mouseout(function(event) {
-              rolaagem = true;
-            })
-
-            if(rolaagem === true) {
-              this.scrollLeft -= (delta * 300);
-              this.scrollRight -= (delta * 300);
-              event.preventDefault();
-            }
-          });
-        });
-      }
-      
-    </script>
-
-    <style>
-      html {
-        transition: .5s linear;
-      }
-    </style>
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Mapa Interativo</title>
   </head>
   <body>
     <div id="root"></div>

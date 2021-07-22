@@ -1,20 +1,18 @@
 {
-  "name": "portal-react",
+  "name": "map-interativo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.21.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
-    "react-awesome-slider": "^4.1.0",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
-    "react-instagram-embed": "^2.0.0",
-    "react-popupbox": "^2.0.8",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
-    "react-scroll-parallax": "^2.4.0",
-    "sass": "^1.32.13",
-    "simple-react-lightbox": "^3.6.6",
+    "sass": "^1.35.2",
+    "swiper": "^6.7.5",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -29,12 +27,6 @@
       "react-app/jest"
     ]
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -46,10 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "@babel/plugin-syntax-class-properties": "^7.12.13",
-    "@babel/preset-react": "^7.13.13"
   }
 }

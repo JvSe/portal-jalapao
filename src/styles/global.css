@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@media screen and (orientation: portrait) {
+    .containerMsg {
+        display:flex;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        align-items:center;
+        justify-content: center;
+
+        backdrop-filter: blur(10px);
+    }
+}
+@media screen and (orientation: landscape) {
+    .containerMsg {
+        display:none;
+    }
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.centerTotal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.containerMsg {
+    display:none
+}
