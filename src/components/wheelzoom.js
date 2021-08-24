@@ -71,12 +71,8 @@ function mouseWheelZoom({ element, zoomStep = .1 } = {}) {
       const containerWidth = containerElement.clientWidth;
       const containerHeight = containerElement.clientHeight;
   
-      if (e.deltaY < 0 && currentZoomLevel < 3.75)  {
-        currentZoomLevel += zoomStep;     
-        console.log(currentZoomLevel)
-        console.log(currentTop)
-        console.log(currentLeft)
-
+      if (e.deltaY < 0) {
+        currentZoomLevel += zoomStep;
       } else {
         currentZoomLevel -= zoomStep;
       }
@@ -221,4 +217,3 @@ function mouseWheelZoom({ element, zoomStep = .1 } = {}) {
   export {
     mouseWheelZoom
   }
-  
