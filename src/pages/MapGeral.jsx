@@ -8,7 +8,7 @@ import rio from '../assets/pins/rio.png';
 import rock from '../assets/pins/rock.png';
 import serra from '../assets/pins/serra.png';
 import praia from '../assets/pins/praia.png';
-import rota from '../assets/pins/rota.svg';
+import rota from '../assets/rotaprincipal.svg';
 
 import logo from '../assets/logo.png';
 
@@ -136,7 +136,8 @@ const MapGeral = () => {
 
   return(
     <div className="centerTotal containerMap flex-col" >
-        <img data-wheel-zoom/>
+         <img data-wheel-zoom style={{backgroundSize:"100% 100%"}} />
+        
         {newListPoint.map(pointTuristic => (
           <PinMap 
             key={pointTuristic.id} 
