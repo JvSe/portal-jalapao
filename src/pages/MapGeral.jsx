@@ -8,11 +8,11 @@ import rio from '../assets/pins/rio.png';
 import rock from '../assets/pins/rock.png';
 import serra from '../assets/pins/serra.png';
 import praia from '../assets/pins/praia.png';
-import rota from '../assets/rotaprincipal.svg';
+import rota from '../assets/rotaprincipal2.svg';
 
-import logo from '../assets/logo.png';
+// import logo from '../assets/logo.png';
 
-import {mouseWheelZoom} from '../components/wheelzoom';
+import {mouseWheelZoom} from '../components/wheelzoomModify2';
 import listaPontosTuristicos from '../pinsMapsStore';
 
 import { useEffect } from 'react';
@@ -136,7 +136,7 @@ const MapGeral = () => {
 
   return(
     <div className="centerTotal containerMap flex-col" >
-         <img data-wheel-zoom style={{backgroundSize:"100% 100%"}} />
+         <img data-wheel-zoom alt="Imagem da rota principal" style={{width:'100%'}} />
         
         {newListPoint.map(pointTuristic => (
           <PinMap 

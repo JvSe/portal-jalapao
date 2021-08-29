@@ -1,15 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import InfoPointTourism from '../components/InfoPointTourism';
 import { FaTimes } from 'react-icons/fa';
 import pin from '../assets/pins/pin.png';
 
+import {wheelzoomModify} from './wheelzoomMODO1';
 
 const PinMap = props => {
     const [modal, setModal] = useState(false);
     const [animation, setAnimation] = useState('animation-in');
-
-    const heigthScreen = window.innerHeight;
-    const widthScreen = window.innerWidth;
 
     const button = () => {
         if(modal === false) {
@@ -23,10 +21,8 @@ const PinMap = props => {
 
     }
 
-    
-
     return(
-        <div>
+        <>
             <div data-zoom-pin className="centerTotal containerPinMap flex-col" onClick={button} style={{top:`${props.point.top}px`, left:`${props.point.left}px`}}>
                 <img src={props.point.img} alt={props.point.name} className="pinPic" />
                 <img src={pin} alt="pin svg" className="pinBottom" />
@@ -44,7 +40,7 @@ const PinMap = props => {
                     </InfoPointTourism>
                 }
             </div>
-        </div>
+        </>
     );
 }
 

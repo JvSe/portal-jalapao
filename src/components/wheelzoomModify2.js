@@ -1,3 +1,5 @@
+// ARQUIVO PARA O ZOOM DO DESENHO
+
 function mouseWheelZoom({ element, zoomStep = .1 } = {}) {
     let containerElement;
     let backgroundElement;
@@ -24,7 +26,7 @@ function mouseWheelZoom({ element, zoomStep = .1 } = {}) {
     function createElementWrappers() {
       containerElement = document.createElement('div');
       containerElement.setAttribute('style',
-        'display: inline-block; position: relative; overflow: hidden;');
+        'display: inline-block; position: relative; overflow: hidden; width:100vw; height:100vh;');
   
       element.parentNode.replaceChild(containerElement, element);
       element.setAttribute('style', 'position: absolute; top: 0; left: 0;');
@@ -38,6 +40,7 @@ function mouseWheelZoom({ element, zoomStep = .1 } = {}) {
       
       element.style.maxWidth = 'none';
       element.style.maxHeight = 'none';
+
     }
   
     function subscribeToEvents() {
@@ -72,7 +75,11 @@ function mouseWheelZoom({ element, zoomStep = .1 } = {}) {
       const containerHeight = containerElement.clientHeight;
   
       if (e.deltaY < 0) {
-        currentZoomLevel += zoomStep;
+        if(currentZoomLevel <= 3.75) {
+          currentZoomLevel += zoomStep;
+        } else {
+          currentZoomLevel = currentZoomLevel
+        }
       } else {
         currentZoomLevel -= zoomStep;
       }
@@ -82,6 +89,8 @@ function mouseWheelZoom({ element, zoomStep = .1 } = {}) {
   
       currentTop = - (currentHeight * yPart - containerHeight * containerYPart);
       currentLeft = - (currentWidth * xPart - containerWidth * containerXPart);
+
+      console.log(currentZoomLevel, currentWidth, currentHeight, currentTop, currentLeft)
   
       if (currentWidth <= containerWidth || currentHeight <= containerHeight) {
         resetCurrentPosition();
@@ -139,6 +148,8 @@ function mouseWheelZoom({ element, zoomStep = .1 } = {}) {
   
       currentTop += e.pageY - previousMouseMoveEvent.pageY;
       currentLeft += e.pageX - previousMouseMoveEvent.pageX;
+
+      console.log(`${currentTop}, ${currentLeft}`)
   
       previousMouseMoveEvent = e;
   
@@ -166,11 +177,11 @@ function mouseWheelZoom({ element, zoomStep = .1 } = {}) {
     }
   
     function resetCurrentPosition() {
-      currentZoomLevel = 1;
-      currentWidth = containerElement.clientWidth;
-      currentHeight = containerElement.clientHeight;
-      currentTop = 0;
-      currentLeft = 0;
+      currentZoomLevel = 1.5;
+      currentWidth = 2880;
+      currentHeight = 1510.5;
+      currentTop = -99.74683600397054;
+      currentLeft = -441.8482142857142;
     }
   
     function reset() {
